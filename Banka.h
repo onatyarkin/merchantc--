@@ -1,8 +1,8 @@
-#include <string>
-#include <iostream>
 #ifndef BANK_BANKA_H
 #define BANK_BANKA_H
 
+#include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -17,8 +17,8 @@ class Banka {
         string getAd();
         string to_string();
         bool getMode();
-        void setMode();
-        void setAd();
+        void setMode(bool modeInput);
+        void setAd(string AdInput);
         void print();
 };
 #endif 

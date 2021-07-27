@@ -40,20 +40,21 @@ void Merchant::bankaEkle(Banka banka) {
 }
 
 void Merchant::bankaCikar(string id) {
-    for (int i = 0; i < anlasmalilar.size(); i++) {
-        Banka banka = anlasmalilar.at(i);
-        if (banka.getID() == id) {
-            anlasmalilar.erase(i);
-            break;
+    vector<Merchant>anlasmalilar;
+    for (vector<Merchant>::iterator it= anlasmalilar.begin(); it !=anlasmalilar.end(); ++it){
+    if (it->getID() == id) {
+        anlasmalilar.erase(it);
+                break;
         }
     }
-}
 
-void Merchant::bankaMod(string id) {
+
+// todo : banka modu tanınmalı // 
+void Merchant::bankaMod(string id); {
     for (int i = 0; i < anlasmalilar.size(); i++) {
         Banka banka = anlasmalilar.at(i);
         if (banka.getID() == id) {
-            banka.setMode();
+            banka.setMode(banka.getMode());   
             break;
         }
     }
@@ -62,22 +63,27 @@ void Merchant::bankaMod(string id) {
 string Merchant::getID() {
     return this->id;
 }
-
-string Merchant::to_string() {
+// todo : fonksiyon isimleri ayn� / de�i�tirlmeli
+string Merchant::getname() {
     return this->name;
 }
 
-string Merchant::to_string() {
+string Merchant::getregistrationtime() {
     return this->registrationtime;
 }
 
-string Merchant::to_string() {
+string Merchant::getterminalID() {
+    return this->terminalId;
+}
+
+string Merchant::getcihaz() {
     return this->cihaz;
 }
-string Merchant::to_string() {
+string Merchant::gettcKimlikNo() {
     return this->tcKimlikNo;
 }
 
-string Merchant::to_string() {
+string Merchant::getpassword() {
     return this->password;
 }
+

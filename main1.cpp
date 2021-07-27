@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include "Merchant.h"
 #include "Banka.h"
 #include "Merchants.h"
 using namespace std;
@@ -50,8 +51,8 @@ int main()
 			std::cin >> password;
 			std::cout << "Merchant TC: ";
 			std::cin >> tcKimlikNo;
-			
-			Merchant name = Merchant(id, name, registrationtime, terminalId, cihaz, tcKimlikNo, anlasmalilar, password);
+			// todo : input ile obje ayn� isimde
+			Merchant name1 = Merchant(id,name,registrationtime,terminalId,cihaz,tcKimlikNo,anlasmalilar,password);
 		    break;
             }
 		  case 2: {
