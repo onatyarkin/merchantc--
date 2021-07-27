@@ -20,7 +20,7 @@ void Merchants::removeMerchant(string id) {
         }
     }
 
-
+}
 
 
 Merchant Merchants::at(int index) {

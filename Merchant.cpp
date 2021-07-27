@@ -48,9 +48,9 @@ void Merchant::bankaCikar(string id) {
         }
     }
 
-
-// todo : banka modu tanınmalı // 
-void Merchant::bankaMod(string id); {
+}
+//  : banka modu tanınmalı // 
+void Merchant::bankaMod(string id) {
     for (int i = 0; i < anlasmalilar.size(); i++) {
         Banka banka = anlasmalilar.at(i);
         if (banka.getID() == id) {
@@ -63,7 +63,7 @@ void Merchant::bankaMod(string id); {
 string Merchant::getID() {
     return this->id;
 }
-// todo : fonksiyon isimleri ayn� / de�i�tirlmeli
+//  : fonksiyon isimleri ayn� / de�i�tirlmeli
 string Merchant::getname() {
     return this->name;
 }
