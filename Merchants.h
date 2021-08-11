@@ -15,4 +15,6 @@ class Merchants {
         void print();
         void removeMerchant(string id);
         Merchant at(int index);
+        Merchant get(string id);
+        int size();
 };

@@ -42,9 +42,9 @@ void Merchant::bankaEkle(Banka banka) {
 void Merchant::bankaCikar(string id) {
     vector<Merchant>anlasmalilar;
     for (vector<Merchant>::iterator it= anlasmalilar.begin(); it !=anlasmalilar.end(); ++it){
-    if (it->getID() == id) {
-        anlasmalilar.erase(it);
-                break;
+        if (it->getID() == id) {
+            anlasmalilar.erase(it);
+            break;
         }
     }
 
@@ -54,7 +54,7 @@ void Merchant::bankaMod(string id) {
     for (int i = 0; i < anlasmalilar.size(); i++) {
         Banka banka = anlasmalilar.at(i);
         if (banka.getID() == id) {
-            banka.setMode(banka.getMode());   
+            banka.setMode(!banka.getMode());   
             break;
         }
     }

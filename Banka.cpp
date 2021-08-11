@@ -20,10 +20,8 @@ void Banka::print() {
     cout << this->mode << endl;
 }
 
-
 string Banka::to_string() {
-    return this->ad;
-    
+    return this->ad; 
 }
 
 

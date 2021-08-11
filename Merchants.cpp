@@ -12,16 +12,26 @@ void Merchants::addMerchant(Merchant merchant) {
 void Merchants::removeMerchant(string id) {
     
     // todo : iterator kullan�m� // neden ?? // 
-    vector<Merchant> Merchants; 
-    for (vector<Merchant>::iterator it = merchants.begin(); it != merchants.end(); ++it) {
-        if (it ->getID() == id) {
-            merchants.erase(it);
+     for (int i = 0; i < merchants.size(); i++) {
+        if (merchants.at(i).getID() == id) {
+            merchants.erase(merchants.begin()+i);
             break;
         }
     }
 
 }
 
+int Merchants::size() {
+    return merchants.size();
+}
+
+Merchant Merchants::get(string id) {
+   for (int i = 0; i < merchants.size(); i++) {
+        if (merchants.at(i).getID() == id) {
+            return merchants.at(i);
+        }
+    } 
+}
 
 Merchant Merchants::at(int index) {
     return merchants.at(index);
@@ -29,7 +39,7 @@ Merchant Merchants::at(int index) {
 
 void Merchants::print() {
     for (int i = 0; i < merchants.size(); i++) {
-        cout << (merchants.at(i).to_string());
+        cout << (merchants.at(i).getname());
     }
     cout << " " << endl;
 }
